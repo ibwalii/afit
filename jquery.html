@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>First JQuery Page</title>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	
+	$('#box1').click(function(e) {
+		$('#p1').show('fast');
+        $('#p1').html('Jquery');
+		$('#p1').css('color','#3FAC7E');
+		$('#p1').addClass('pelement');
+		$('#box1').hide('slow');
+    });
+	
+	$('#p1').click(function(){
+			$('#box1').show('slow');
+			$('#p1').hide('fast');
+		});
+		$('#b1').click(function(e) {
+            $('#list1').toggle();
+        });
+});
+</script>
+<style>
+.pelement{
+	font-size:36px;
+	}
+</style>
+</head>
+
+<body>
+<div id="box1" style="background:rgba(117,156,177,0.2);">
+Hello from Inside Box 1
+</div>
+<p id="p1"></p>
+<button type="button" name="b1" id="b1">Click Me</button>
+<div id="list1"> Hello </div>
+<input type="text" placeholder="Enter Name">
+</body>
+</html>
